@@ -56,8 +56,8 @@ public String getCustDetails(String name){
 
 public  void connectDatabase(){
 
-	String username="system";
-	String password="Kingayro1";
+	String username="";
+	String password="";
 	 String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
 	try{
 		 connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl"
@@ -70,12 +70,6 @@ public  void connectDatabase(){
 }
 
 public void addEmployee(Employee emp){
-	try{
-	if(connection.isClosed()==true){
-		System.out.println("Connection failed");
-	}
-	}catch(Exception e){
-		System.out.println("Connection successful");
-	}
+
 }
 }
