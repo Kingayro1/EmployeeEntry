@@ -17,6 +17,8 @@ public class GUIController  {
 		a.setSize(600, 400);
 		a.setVisible(true);
 		 }});
+	 
+	 
 
  }}
 	

@@ -21,7 +21,7 @@ public class GUI extends JFrame {
 	*/
 	Container GUIContainer;
 	ImagePanel myImagePanel;
-	
+	JDBC jdbc = new JDBC();
     JPanel Panel1;
     JPanel Panel2,Panel2a,Panel2b,Panel2c;
     JPanel displayPanel,searchPanel;
@@ -520,6 +520,7 @@ public class GUI extends JFrame {
 		displayPanel.setVisible(false);
 		searchPanel.setVisible(false);
 		
+		jdbc.connectDatabase();
 	}
 
 
@@ -589,7 +590,9 @@ public class GUI extends JFrame {
 			newEmployee.setSalary(salary);
 			newEmployee.setEmployeeImage(image);
 			
-			//empty text fields			
+			//enter record to database
+			jdbc.addEmployee(new Employee());
+			//reset text fields			
 			nameField.setText("");
 			salaryField.setText("");
 			natInsurNoField.setText("");
